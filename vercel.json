@@ -6,7 +6,5 @@
     "routes": [
       { "src": "/api/(.*)", "dest": "api/index.js" }
     ],
-    "env": {
-      "OPENSEA_API_KEY": "@opensea-api-key"
-    }
+    "env": {}
   }
