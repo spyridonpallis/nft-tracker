@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT Portfolio Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>NFT Portfolio Tracker</h1>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                <span class="material-icons">dark_mode</span>
+            </button>
+        </div>
+    </header>
+    <main>
+        <section id="search-section">
+            <div class="search-container">
+                <input type="text" id="address-input" placeholder="Enter Ethereum address or ENS name" aria-label="Ethereum address or ENS name">
+                <button id="search-button">Track</button>
+            </div>
+        </section>
+        <section id="results-section">
+            <div id="portfolio-summary" class="card">
+                <h2>Portfolio Overview</h2>
+                <div class="summary-grid">
+                    <div>
+                        <p><strong>Address:</strong> <span id="wallet-address"></span></p>
+                        <p><strong>Total NFTs:</strong> <span id="total-nfts"></span></p>
+                        <p><strong>Unique Collections:</strong> <span id="unique-collections"></span></p>
+                        <p><strong>Portfolio Value:</strong></p>
+                        <p><strong>Portfolio Value:</strong></p>
+                        <p class="portfolio-value">
+                            <span id="total-eth" class="eth-value"></span>
+                            <span id="total-usd" class="usd-value"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="chart-container" class="card">
+                <canvas id="portfolio-chart"></canvas>
+            </div>
+            <div class="table-container card">
+                <table id="nft-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Collection</th>
+                            <th>Quantity</th>
+                            <th>Floor Price (ETH)</th>
+                            <th>Floor Price (USD)</th>
+                            <th>Value (ETH)</th>
+                            <th>Value (USD)</th>
+                            <th>% of Portfolio</th>
+                        </tr>
+                    </thead>
+                    <tbody id="nft-table-body">
+                        <!-- NFT data will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <div id="loading-overlay">
+        <div class="spinner"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
